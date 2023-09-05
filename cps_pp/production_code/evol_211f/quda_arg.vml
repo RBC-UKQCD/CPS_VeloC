@@ -1,0 +1,22 @@
+class QudaArg QudaPram = {
+CudaPrecision gauge_prec = CUDA_DOUBLE_PRECISION
+CudaPrecision spinor_prec = CUDA_DOUBLE_PRECISION
+CudaReconstructType reconstruct = CUDA_RECONSTRUCT_12
+CudaPrecision gauge_prec_sloppy = CUDA_HALF_PRECISION
+CudaPrecision spinor_prec_sloppy = CUDA_HALF_PRECISION
+CudaReconstructType reconstruct_sloppy = CUDA_RECONSTRUCT_NO
+double reliable_delta = 0.1
+int max_restart = 1
+int device = 0
+int maxiter_precondition = 5
+int Ls_cheap = 4
+bool perform_mspcg_madwf_ml_training = 0
+bool use_mspcg_madwf_ml_training = 0
+double mu = 0.437
+Vector split_grid[4]={
+int split_grid[0] = 3
+int split_grid[1] = 1
+int split_grid[2] = 2
+int split_grid[3] = 2
+}
+}

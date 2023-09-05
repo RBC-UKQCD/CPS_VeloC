@@ -1,0 +1,72 @@
+/*!\file
+  \brief   Global options for compiling the Colombia code:
+
+  Generated automatically from config.h.in by configure procedure.
+
+  $Id: config.h.in,v 1.29.28.1 2012-11-15 18:17:08 ckelly Exp $
+*/
+/* Global options for compiling the Columbia code:  
+ * @configure_input@
+ * 
+ */
+
+#ifndef INCLUDED_CONFIG_H_
+#define INCLUDED_CONFIG_H_                  //!< Prevent multiple inclusion 
+
+#include <conf.h>
+
+#define NOARCH 0
+#define QCDOC  1
+#define QCDSP  2
+#define BGL    3
+#define BGP    4
+#define BGQ    5
+
+
+//#include <version.h>
+#define VERSION_MAJOR @VERSION_MAJOR@
+#define VERSION_MINOR @VERSION_MINOR@
+#define VERSION_SUB @VERSION_SUB@
+#define VERSION_STR @VERSION_STR@
+
+#define TARGET @ARCH@
+#@ENABLE_PARALLEL@
+
+#@HAVE_BFM@
+
+// The configure procedure should make this unnecessary, but just in case...
+#ifndef TARGET
+#define TARGET NOARCH
+#endif
+
+#define CPS_FLOAT_ALIGN
+
+#define CWDPREFIX(A) A
+
+
+
+/*! Explicit casting away of the const-ness  */
+#define CAST_AWAY_CONST(x) ( const_cast<char*>(x) )
+
+/*!  Precision in the global sum (undefined gives QCDSP behaviour). */
+#define GLOBALSUM_TYPE @GSUMPRECISION@
+
+#define CPS_END_NAMESPACE    @CPS_END_NAMESPACE@  
+#define CPS_START_NAMESPACE  @CPS_START_NAMESPACE@
+#define USING_NAMESPACE_CPS  @USING_NAMESPACE_CPS@
+#define CPS_NAMESPACE	     @CPS_NAMESPACE@
+
+
+#define COMMS_DATASIZE (sizeof(@LOCALPRECISION@))
+
+#undef UNIFORM_SEED_TESTING
+#undef UNIFORM_SEED_NO_COMMS
+
+/* ------------------------------------------------------------------*/
+
+#endif /* INCLUDED_CONFIG_H_ */
+
+
+
+
+

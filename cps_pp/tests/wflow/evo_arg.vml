@@ -1,0 +1,21 @@
+class EvoArg evo_arg = {
+int traj_start = 871
+int gauge_unload_period =  1
+int gauge_configurations = 1
+int io_concurrency = 4
+int hdw_xcsum = 1
+int hdw_rcsum = 1
+int reproduce_interval = 0
+string ensemble_id = "96I"
+string ensemble_label = "MDWF_2+1f_96nt192_IWASAKI_b2.31_ls12b+c2_M1.8_ms0.02144_mu0.00054_rhmc_HR_G"
+string creator = "RBC"
+string gauge_file_stem = "/auto/qs0-3/qcddata/MDWF/2+1f/96nt192/IWASAKI/b2.31/ls12b+c2/M1.8/ms0.02144/mu0.00054/rhmc_HE_G/evol3/configurations/ckpoint_lat"
+string rng_file_stem = "./ckpoint_rng"
+string plaquette_stem = "./plaq"
+string pbp_stem = "./pbp"
+string evo_stem = "./hmc"
+string w_spect_directory = "./alg_w_spect"
+string work_directory = "96I/"
+int measure_pbp = 0
+int measure_w_spect_interval = 0
+}
